@@ -43,6 +43,7 @@ public class BookWareHouseController {
          return teacherDao.findById(id);
      }
      
+     // https://stackoverflow.com/questions/16332092/spring-mvc-pathvariable-with-dot-is-getting-truncated
      @RequestMapping("/teachers/email/{email:.+}")
      public Teacher getTeacherByEmail(@PathVariable String email){
          return teacherDao.findByEmail(email);
